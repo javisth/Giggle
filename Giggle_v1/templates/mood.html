@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mood-Based Job Finder</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  </head>
+  <body>
+    <h1>What's your mood today?</h1>
+    <select id="mood">
+      <option value="creative">Creative</option>
+      <option value="analytical">Analytical</option>
+      <option value="tired">Tired</option>
+      <option value="uninspired">Uninspired</option>
+      <option value="writing">Writing</option>
+      <option value="coding">Coding</option>
+      <option value="playing the guitar">Playing the Guitar</option>
+    </select>
+    <button onclick="getJobs()">Find Jobs</button>
+    <ul id="job-list"></ul>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </body>
+</html>
+
