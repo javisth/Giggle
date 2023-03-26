@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Register</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('form').submit(function(event) {
+        var password = $('#password').val();
+        var confirm_password = $('#confirm_password').val();
+        if (password != confirm_password) {
+          alert("Passwords don't match");
+          event.preventDefault();
+        }
+      });
+    });
+  </script>
+</head>
+<body>
+  <h1>Register</h1>
+  <form action="{{ url_for('register') }}" method="POST">
+    <label for="user_type">I am a:</label>
+    <select name="user_type" id="user_type">
+      <option value="company">Company</option>
+      <option value="user">User</option>
+    </select>
+    <br>
+    <label for="email">Email:</label>
+    <input type="email" name="email" id="email" required>
+    <br>
+    <label for="password">Password:</label>
+    <input type="password" name="password" id="password" required>
+    <br>
+    <label for="confirm_password">Confirm Password:</label>
+    <input type="password" name="confirm_password" id="confirm_password" required>
+    <br>
+    <input type="submit" value="Register">
+  </form>
+</body>
+</html>
+

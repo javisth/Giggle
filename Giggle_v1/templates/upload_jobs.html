@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Upload Jobs</title>
+  </head>
+  <body>
+    <h1>Upload Jobs</h1>
+    <form method="POST" action="{{ url_for('upload') }}">
+      <label for="job_title">Job Title:</label>
+      <input type="text" id="job_title" name="job_title" required><br><br>
+      <label for="job_description">Job Description:</label>
+      <textarea id="job_description" name="job_description" required></textarea><br><br>
+      <label for="job_payment">Job Pay:</label>
+      <input type="number" id="job_pay" name="job_pay" required><br><br>
+      <label for="job_category">Job Category:</label>
+      <select name="job_category" id="job_category" required>
+        <option value="Technology">Technology</option>
+        <option value="Design">Design</option>
+        <option value="Marketing">Marketing</option>
+        <option value="Writing">Writing</option>
+        <option value="Data Entry">Data Entry</option>
+      </select><br><br>
+      <label for="job_location">Job Location:</label>
+      <input type="text" id="job_location" name="job_location" required><br><br>
+      <input type="submit" value="Submit">
+    </form>
+  </body>
+</html>
+
